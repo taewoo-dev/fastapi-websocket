@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Chat Room</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- 외부 CSS 연결 -->
+</head>
+<body>
+    <form action="/chat" method="get" id="room-form">
+        <label for="room">Enter Room Name:</label>
+        <input type="text" id="room" name="room" placeholder="Enter room name" required>
+        <button type="submit" class="index-btn">Join Room</button>
+    </form>
+</body>
+</html>

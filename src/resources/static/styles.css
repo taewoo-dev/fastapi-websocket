@@ -1,0 +1,144 @@
+/* 전체 페이지 레이아웃 (공통) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* index.html 폼 스타일 */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* index.html 버튼 스타일 */
+button.index-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.index-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 채팅 페이지 스타일 */
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 메시지 영역과 입력창을 가로로 정렬 */
+#message-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+#messages {
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+/* 스크롤바 스타일 */
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+/* 메시지 입력 필드와 버튼 정렬 */
+.message-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#messageInput {
+    width: 75%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-right: 10px;
+}
+
+/* 채팅 페이지 버튼 스타일 */
+button.chat-btn {
+    padding: 15px 30px;
+    background-color: #ffeb3b;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 20%;
+}
+
+button.chat-btn:hover {
+    background-color: #fdd835;
+}

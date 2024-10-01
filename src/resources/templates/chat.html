@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat - Room: {{ room }}</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- CSS 파일 연결 -->
+</head>
+<body>
+    <div class="chat-container">
+        <h1>WebSocket Chat - Room: {{ room }}</h1>
+
+        <div id="message-area">
+            <div id="messages">
+                <p><em>Connected users can chat here...</em></p>
+            </div>
+        </div>
+
+        <div class="message-input-container">
+            <input type="text" id="messageInput" placeholder="Enter your message here" autocomplete="off"/>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <script src="/static/app.js"></script> <!-- JS 파일 연결 -->
+</body>
+</html>
