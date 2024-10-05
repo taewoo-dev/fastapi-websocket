@@ -1,7 +1,7 @@
 services:
   mysql:
     image: mysql:8.0
-    container_name: fastapi-websocket-study-mysql
+    container_name: fastapi-websocket-mysql
     restart: always
 
     environment:
@@ -16,7 +16,7 @@ services:
 
   redis:
     image: redis:7.0
-    container_name: fastapi-websocket-study-redis
+    container_name: fastapi-websocket-redis
     restart: always
 
     ports:

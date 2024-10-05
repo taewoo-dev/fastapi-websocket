@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from core.config import settings
 
 # 데이터베이스에 접근,설정을 관리하는 객체
-async_engine = create_async_engine(settings.database_url)
+async_engine = create_async_engine(settings.database_async_url)
 
 # 세션을 생성하는 객체
 AsyncSessionFactory = async_sessionmaker(
