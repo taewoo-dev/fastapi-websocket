@@ -5,7 +5,6 @@ from fastapi.templating import Jinja2Templates
 
 from common.post_construct import post_construct
 
-
 app = FastAPI()
 
 post_construct(app)

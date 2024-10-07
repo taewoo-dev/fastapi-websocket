@@ -1,26 +1,21 @@
-import os
 from enum import Enum
-from pydantic_settings import BaseSettings, SettingsConfigDict
+
+from pydantic_settings import BaseSettings
 
 
-class ServerEnv(str, Enum):
-    Local = "local"
-    DEV = "dev"
+class Env(str, Enum):  # str과 Enum을 함께 상속받아 문자열처럼 동작하게 함
+    LOCAL = "local"
+    STAGE = "stage"
     PROD = "prod"
 
 
-# 현재 환경 변수에서 'ENV' 값을 읽거나 기본값으로 'local'을 사용
-SERVER_ENV = os.getenv("ENV", ServerEnv.Local.value)
-
-
 class Settings(BaseSettings):
-    database_url: str
-    database_async_url: str
-    redis_host: str
-    redis_port: int
+    ENV: Env = Env.LOCAL
+    DB_HOST: str = "127.0.0.1"
+    DB_PORT: int = 3309
+    DB_USER: str = "root"
+    DB_PASSWORD: str = "qwerasd"
+    DB_DB: str = "websocket-study"
 
-    # Pydantic에서 환경 파일을 자동으로 로드
-    model_config = SettingsConfigDict(env_file=f".env.{SERVER_ENV}")
-
-
-settings = Settings()
+    REDIS_HOST: str = "127.0.0.1"
+    REDIS_PORT: int = 6380
